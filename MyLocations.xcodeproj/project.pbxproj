@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD2265E43BB00D109FD /* AppDelegate.swift */; };
 		5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */; };
-		5CA79FD7265E43BB00D109FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD6265E43BB00D109FD /* ViewController.swift */; };
+		5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */; };
 		5CA79FDA265E43BB00D109FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA79FD8265E43BB00D109FD /* Main.storyboard */; };
 		5CA79FDD265E43BB00D109FD /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FDB265E43BB00D109FD /* MyLocations.xcdatamodeld */; };
 		5CA79FDF265E43BE00D109FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA79FDE265E43BE00D109FD /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		5CA79FCF265E43BB00D109FD /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA79FD2265E43BB00D109FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5CA79FD6265E43BB00D109FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		5CA79FD9265E43BB00D109FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CA79FDC265E43BB00D109FD /* MyLocations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLocations.xcdatamodel; sourceTree = "<group>"; };
 		5CA79FDE265E43BE00D109FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				5CA79FD2265E43BB00D109FD /* AppDelegate.swift */,
 				5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */,
-				5CA79FD6265E43BB00D109FD /* ViewController.swift */,
+				5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */,
 				5CA79FD8265E43BB00D109FD /* Main.storyboard */,
 				5CA79FDE265E43BE00D109FD /* Assets.xcassets */,
 				5CA79FE0265E43BE00D109FD /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA79FD7265E43BB00D109FD /* ViewController.swift in Sources */,
+				5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */,
 				5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */,
 				5CA79FDD265E43BB00D109FD /* MyLocations.xcdatamodeld in Sources */,
 				5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */,
