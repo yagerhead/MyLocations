@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7F70C82660FB43005AC733 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70C72660FB43005AC733 /* HudView.swift */; };
+		5C7F70CA26611D8E005AC733 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70C926611D8E005AC733 /* Functions.swift */; };
 		5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD2265E43BB00D109FD /* AppDelegate.swift */; };
 		5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */; };
 		5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C7F70C72660FB43005AC733 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		5C7F70C926611D8E005AC733 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		5CA79FCF265E43BB00D109FD /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA79FD2265E43BB00D109FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */,
 				5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */,
 				5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */,
+				5C7F70C72660FB43005AC733 /* HudView.swift */,
+				5C7F70C926611D8E005AC733 /* Functions.swift */,
 				5CA79FD8265E43BB00D109FD /* Main.storyboard */,
 				5CA79FDE265E43BE00D109FD /* Assets.xcassets */,
 				5CA79FE0265E43BE00D109FD /* LaunchScreen.storyboard */,
@@ -149,8 +155,10 @@
 				5CA79FEC26600B3700D109FD /* CategoryPickerViewController.swift in Sources */,
 				5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */,
 				5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */,
+				5C7F70CA26611D8E005AC733 /* Functions.swift in Sources */,
 				5CA79FDD265E43BB00D109FD /* MyLocations.xcdatamodeld in Sources */,
 				5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */,
+				5C7F70C82660FB43005AC733 /* HudView.swift in Sources */,
 				5CA79FEA265FDC9000D109FD /* LocationDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42D78766UF;
 				INFOPLIST_FILE = MyLocations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42D78766UF;
 				INFOPLIST_FILE = MyLocations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
