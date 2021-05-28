@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -24,9 +25,11 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    var managedObjectContext: NSManagedObjectContext!
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "No Category"
+    var date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +46,7 @@ class LocationDetailsViewController: UITableViewController {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = format(date: Date())
+        dateLabel.text = format(date: date)
         
         // Hide Keyboard
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -66,9 +69,22 @@ class LocationDetailsViewController: UITableViewController {
         let hudView = HudView.hud(inView: mainView, animated: true)
         hudView.text = "Tagged"
         
-        afterDelay(0.6) {
-            hudView.hide()
-            self.navigationController?.popViewController(animated: true)
+        let location = Location(context: managedObjectContext)
+        location.locationDescription = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        
+        do {
+            try managedObjectContext.save()
+            afterDelay(0.6) {
+                hudView.hide()
+                self.navigationController?.popViewController(animated: true)
+            }
+        } catch {
+            fatalCoreDataError(error)
         }
     }
     
@@ -80,17 +96,6 @@ class LocationDetailsViewController: UITableViewController {
         let controller = segue.source as! CategoryPickerViewController
         categoryName = controller.selectedCategoryName
         categoryLabel.text = categoryName
-    }
-    
-    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
-        let point = gestureRecognizer.location(in: tableView)
-        let indexPath = tableView.indexPathForRow(at: point)
-        
-        if indexPath != nil && indexPath!.section == 0 &&
-            indexPath!.row == 0 {
-            return
-        }
-        descriptionTextView.resignFirstResponder()
     }
     
     //MARK: - Helper Methods
@@ -120,6 +125,17 @@ class LocationDetailsViewController: UITableViewController {
     
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
+    }
+    
+    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.location(in: tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        if indexPath != nil && indexPath!.section == 0 &&
+            indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
     }
     
     //MARK: - Table View Delegates

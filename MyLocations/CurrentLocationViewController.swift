@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -27,6 +28,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     var performingReverseGeocoding = false
     var lastGeocodingError: Error?
     var timer: Timer?
+    var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,7 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             let controller = segue.destination as! LocationDetailsViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
+            controller.managedObjectContext = managedObjectContext
         }
     }
     
@@ -77,7 +80,10 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     //MARK: - Helper Methods
     func showLocationServicesDeniedAlert() {
-        let alert = UIAlertController(title: "Location Services Disabled", message: "Please enable location services for this app in settigns.", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Location Services Disabled",
+            message: "Please enable location services for this app in settigns.",
+            preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
