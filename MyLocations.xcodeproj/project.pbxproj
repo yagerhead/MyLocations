@@ -13,6 +13,7 @@
 		5C7F70CE26613AFA005AC733 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70CC26613AFA005AC733 /* Location+CoreDataProperties.swift */; };
 		5C7F70D026624AE0005AC733 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70CF26624AE0005AC733 /* LocationsViewController.swift */; };
 		5C7F70D2266257F6005AC733 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D1266257F6005AC733 /* LocationCell.swift */; };
+		5C7F70D42662A5A3005AC733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D32662A5A3005AC733 /* MapViewController.swift */; };
 		5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD2265E43BB00D109FD /* AppDelegate.swift */; };
 		5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */; };
 		5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */; };
@@ -31,6 +32,7 @@
 		5C7F70CC26613AFA005AC733 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5C7F70CF26624AE0005AC733 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		5C7F70D1266257F6005AC733 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		5C7F70D32662A5A3005AC733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5CA79FCF265E43BB00D109FD /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA79FD2265E43BB00D109FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */,
 				5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */,
 				5C7F70CF26624AE0005AC733 /* LocationsViewController.swift */,
+				5C7F70D32662A5A3005AC733 /* MapViewController.swift */,
 				5C7F70D1266257F6005AC733 /* LocationCell.swift */,
 				5C7F70C72660FB43005AC733 /* HudView.swift */,
 				5C7F70C926611D8E005AC733 /* Functions.swift */,
@@ -170,6 +173,7 @@
 				5C7F70CA26611D8E005AC733 /* Functions.swift in Sources */,
 				5C7F70D026624AE0005AC733 /* LocationsViewController.swift in Sources */,
 				5C7F70CE26613AFA005AC733 /* Location+CoreDataProperties.swift in Sources */,
+				5C7F70D42662A5A3005AC733 /* MapViewController.swift in Sources */,
 				5C7F70D2266257F6005AC733 /* LocationCell.swift in Sources */,
 				5CA79FDD265E43BB00D109FD /* MyLocations.xcdatamodeld in Sources */,
 				5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */,
