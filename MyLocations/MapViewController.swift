@@ -57,21 +57,6 @@ class MapViewController: UIViewController {
         }
     }
     
-    //MARK: - Actions
-    @IBAction func showUser() {
-        let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        mapView.setRegion(mapView.regionThatFits(region), animated: true)
-    }
-    
-    @IBAction func showLocations() {
-        let theRegion = region(for: locations)
-        mapView.setRegion(theRegion, animated: true)
-    }
-    
-    @objc func showLocationDetails(_ sender: UIButton) {
-        performSegue(withIdentifier: "EditLocation", sender: sender)
-    }
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditLocation" {
@@ -82,6 +67,17 @@ class MapViewController: UIViewController {
             let location = locations[button.tag]
             controller.locationToEdit = location
         }
+    }
+    
+    //MARK: - Actions
+    @IBAction func showUser() {
+        let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(mapView.regionThatFits(region), animated: true)
+    }
+    
+    @IBAction func showLocations() {
+        let theRegion = region(for: locations)
+        mapView.setRegion(theRegion, animated: true)
     }
     
     //MARK: - Helper methods
@@ -133,6 +129,10 @@ class MapViewController: UIViewController {
         }
         
         return mapView.regionThatFits(region)
+    }
+    
+    @objc func showLocationDetails(_ sender: UIButton) {
+        performSegue(withIdentifier: "EditLocation", sender: sender)
     }
 }
 

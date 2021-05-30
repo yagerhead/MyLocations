@@ -192,10 +192,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-9W-wgw">
+                                                    <rect key="frame" x="112" y="10" width="229.5" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="s4C-cU-xN0"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Aba-7z-OOk" firstAttribute="centerY" secondItem="bJM-F6-umz" secondAttribute="centerY" id="LVT-Ck-08g"/>
+                                                <constraint firstAttribute="bottom" secondItem="kmd-9W-wgw" secondAttribute="bottom" constant="10" id="T8b-u7-L3l"/>
+                                                <constraint firstItem="kmd-9W-wgw" firstAttribute="top" secondItem="bJM-F6-umz" secondAttribute="top" constant="10" id="VKd-BE-f56"/>
                                                 <constraint firstItem="Aba-7z-OOk" firstAttribute="leading" secondItem="bJM-F6-umz" secondAttribute="leadingMargin" id="b2t-Hb-fkY"/>
+                                                <constraint firstItem="kmd-9W-wgw" firstAttribute="leading" secondItem="Aba-7z-OOk" secondAttribute="trailing" constant="16" id="nEg-1e-exZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="kmd-9W-wgw" secondAttribute="trailing" constant="8" id="vrI-5A-o6o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -325,17 +335,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="Aba-7z-OOk" id="Upu-P0-3Fw"/>
                         <outlet property="addressLabel" destination="vYe-qj-rfG" id="RMu-we-NDl"/>
                         <outlet property="categoryLabel" destination="trk-X8-0Oj" id="IsR-wZ-Sdw"/>
                         <outlet property="dateLabel" destination="GqD-bQ-54n" id="ODn-OM-chZ"/>
                         <outlet property="descriptionTextView" destination="Wsz-Tc-e94" id="juV-tz-1AZ"/>
+                        <outlet property="imageHeight" destination="s4C-cU-xN0" id="c2q-Tu-CH8"/>
+                        <outlet property="imageView" destination="kmd-9W-wgw" id="b4T-JO-Hr8"/>
                         <outlet property="latitudeLabel" destination="qUZ-2s-aaY" id="JaS-Nc-Sne"/>
                         <outlet property="longitudeLabel" destination="jid-7U-5ej" id="qSe-Nf-QRN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5W-20-ull" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-647" y="254"/>
+            <point key="canvasLocation" x="-647.20000000000005" y="253.2233883058471"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="CbX-uL-ZML">
@@ -416,25 +429,34 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmd-Gz-p9t">
-                                            <rect key="frame" x="16" y="37" width="343" height="17"/>
+                                            <rect key="frame" x="76" y="37" width="283" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-em-LHh">
-                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <rect key="frame" x="76" y="11" width="283" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNQ-Gi-tU1">
+                                            <rect key="frame" x="16" y="6" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="axJ-9O-dGu"/>
+                                                <constraint firstAttribute="width" constant="52" id="iIp-Yf-dIC"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="3Yw-em-LHh" firstAttribute="trailing" secondItem="xnH-ap-dGn" secondAttribute="trailingMargin" id="DxH-iO-3h6"/>
                                         <constraint firstItem="Rmd-Gz-p9t" firstAttribute="top" secondItem="3Yw-em-LHh" secondAttribute="bottom" constant="5" id="JJz-zm-mCU"/>
                                         <constraint firstItem="3Yw-em-LHh" firstAttribute="top" secondItem="xnH-ap-dGn" secondAttribute="topMargin" id="K7u-z5-rcb"/>
+                                        <constraint firstItem="LNQ-Gi-tU1" firstAttribute="leading" secondItem="xnH-ap-dGn" secondAttribute="leading" constant="16" id="Ofx-Dp-2yY"/>
                                         <constraint firstItem="Rmd-Gz-p9t" firstAttribute="top" secondItem="3Yw-em-LHh" secondAttribute="bottom" constant="5" id="OwR-00-4AF"/>
-                                        <constraint firstItem="Rmd-Gz-p9t" firstAttribute="leading" secondItem="xnH-ap-dGn" secondAttribute="leadingMargin" id="kVI-l9-gVd"/>
-                                        <constraint firstItem="3Yw-em-LHh" firstAttribute="leading" secondItem="xnH-ap-dGn" secondAttribute="leadingMargin" id="t4u-sg-FV3"/>
+                                        <constraint firstItem="LNQ-Gi-tU1" firstAttribute="top" secondItem="xnH-ap-dGn" secondAttribute="top" constant="6" id="Viu-5o-bE2"/>
+                                        <constraint firstItem="3Yw-em-LHh" firstAttribute="leading" secondItem="LNQ-Gi-tU1" secondAttribute="trailing" constant="8" id="hTF-vr-XQN"/>
+                                        <constraint firstItem="Rmd-Gz-p9t" firstAttribute="leading" secondItem="LNQ-Gi-tU1" secondAttribute="trailing" constant="8" id="pjh-l6-MGS"/>
                                         <constraint firstItem="Rmd-Gz-p9t" firstAttribute="trailing" secondItem="xnH-ap-dGn" secondAttribute="trailingMargin" id="ubc-tv-EYM"/>
                                         <constraint firstItem="Rmd-Gz-p9t" firstAttribute="bottom" secondItem="xnH-ap-dGn" secondAttribute="bottomMargin" id="yrK-8M-L7c"/>
                                     </constraints>
@@ -442,6 +464,7 @@
                                 <connections>
                                     <outlet property="addressLabel" destination="Rmd-Gz-p9t" id="XG3-Ny-uFa"/>
                                     <outlet property="descriptionLabel" destination="3Yw-em-LHh" id="UXQ-IH-G0B"/>
+                                    <outlet property="photoImageView" destination="LNQ-Gi-tU1" id="VwJ-Dz-niW"/>
                                     <segue destination="uqV-RR-JQh" kind="show" identifier="EditLocation" id="b0W-NQ-iMJ"/>
                                 </connections>
                             </tableViewCell>
@@ -455,7 +478,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mm-bG-W1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="-537"/>
+            <point key="canvasLocation" x="61.600000000000001" y="-537.48125937031489"/>
         </scene>
         <!--Map-->
         <scene sceneID="OQy-DP-I47">
@@ -559,7 +582,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5S8-8F-Wrg"/>
+        <segue reference="b0W-NQ-iMJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
