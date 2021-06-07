@@ -37,7 +37,12 @@ class LocationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         performFetch()
-        navigationItem.rightBarButtonItem = editButtonItem
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView()
+        
+        //Removing border in navigation VC
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "light&Dark")
     }
     
     //MARK: - Navigation
@@ -69,7 +74,22 @@ class LocationsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionInfo = fetchedResultsController.sections![section]
-        return sectionInfo.name
+        return sectionInfo.name.uppercased()
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let labelRect = CGRect(x: 15, y: tableView.sectionHeaderHeight - 18, width: 300, height: 10)
+        let label = UILabel(frame: labelRect)
+        label.font = UIFont(name: "Rubik-Medium", size: 14)
+        label.text = tableView.dataSource!.tableView!(tableView, titleForHeaderInSection: section)
+        label.textColor = UIColor(named: "subtitleTint")
+        label.backgroundColor = UIColor(named: "light&Dark")
+        
+        let viewRect = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.sectionHeaderHeight)
+        let view = UIView(frame: viewRect)
+        view.backgroundColor = UIColor(named: "light&Dark")
+        view.addSubview(label)
+        return view
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

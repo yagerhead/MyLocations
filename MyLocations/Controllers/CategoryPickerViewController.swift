@@ -19,6 +19,8 @@ class CategoryPickerViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = UIView()
         
         for i in 0..<categories.count {
             if categories[i] == selectedCategoryName {

@@ -15,6 +15,10 @@
 		5C7F70D2266257F6005AC733 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D1266257F6005AC733 /* LocationCell.swift */; };
 		5C7F70D42662A5A3005AC733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D32662A5A3005AC733 /* MapViewController.swift */; };
 		5C7F70D62663F8B5005AC733 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D52663F8B5005AC733 /* UIImage+Resize.swift */; };
+		5C7F70D82664EB52005AC733 /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F70D72664EB52005AC733 /* String+AddText.swift */; };
+		5C7F70E42668CECC005AC733 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F70E32668CECC005AC733 /* Rubik-Medium.ttf */; };
+		5C7F70E62668CEDF005AC733 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F70E52668CEDF005AC733 /* Rubik-SemiBold.ttf */; };
+		5C7F70E82668CEEF005AC733 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F70E72668CEEF005AC733 /* Rubik-Regular.ttf */; };
 		5CA79FD3265E43BB00D109FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD2265E43BB00D109FD /* AppDelegate.swift */; };
 		5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */; };
 		5CA79FD7265E43BB00D109FD /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */; };
@@ -24,6 +28,7 @@
 		5CA79FE2265E43BE00D109FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA79FE0265E43BE00D109FD /* LaunchScreen.storyboard */; };
 		5CA79FEA265FDC9000D109FD /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */; };
 		5CA79FEC26600B3700D109FD /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */; };
+		5CE0675A266D0C9600B913B9 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE06759266D0C9600B913B9 /* Sound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,10 @@
 		5C7F70D1266257F6005AC733 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		5C7F70D32662A5A3005AC733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5C7F70D52663F8B5005AC733 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		5C7F70D72664EB52005AC733 /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
+		5C7F70E32668CECC005AC733 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		5C7F70E52668CEDF005AC733 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		5C7F70E72668CEEF005AC733 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		5CA79FCF265E43BB00D109FD /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA79FD2265E43BB00D109FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 		5CA79FE3265E43BE00D109FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		5CE06759266D0C9600B913B9 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +69,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5CA79FC6265E43BB00D109FD = {
+		5C7F70DD26656ABE005AC733 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F70D32662A5A3005AC733 /* MapViewController.swift */,
+				5C7F70CF26624AE0005AC733 /* LocationsViewController.swift */,
+				5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */,
+				5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */,
+				5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C7F70DE26656AEE005AC733 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				5C7F70CB26613AFA005AC733 /* Location+CoreDataClass.swift */,
 				5C7F70CC26613AFA005AC733 /* Location+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5C7F70DF26656B4C005AC733 /* Extensions&Functions */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F70D52663F8B5005AC733 /* UIImage+Resize.swift */,
+				5C7F70C926611D8E005AC733 /* Functions.swift */,
+				5C7F70D72664EB52005AC733 /* String+AddText.swift */,
+			);
+			path = "Extensions&Functions";
+			sourceTree = "<group>";
+		};
+		5C7F70E02668CDD9005AC733 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F70E72668CEEF005AC733 /* Rubik-Regular.ttf */,
+				5C7F70E52668CEDF005AC733 /* Rubik-SemiBold.ttf */,
+				5C7F70E32668CECC005AC733 /* Rubik-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5CA79FC6265E43BB00D109FD = {
+			isa = PBXGroup;
+			children = (
+				5CE06754266CE07900B913B9 /* Sound */,
+				5C7F70E02668CDD9005AC733 /* Fonts */,
+				5C7F70DE26656AEE005AC733 /* CoreData */,
 				5CA79FD1265E43BB00D109FD /* MyLocations */,
 				5CA79FD0265E43BB00D109FD /* Products */,
 			);
@@ -82,15 +134,10 @@
 			children = (
 				5CA79FD2265E43BB00D109FD /* AppDelegate.swift */,
 				5CA79FD4265E43BB00D109FD /* SceneDelegate.swift */,
-				5CA79FD6265E43BB00D109FD /* CurrentLocationViewController.swift */,
-				5CA79FE9265FDC9000D109FD /* LocationDetailsViewController.swift */,
-				5CA79FEB26600B3700D109FD /* CategoryPickerViewController.swift */,
-				5C7F70CF26624AE0005AC733 /* LocationsViewController.swift */,
-				5C7F70D32662A5A3005AC733 /* MapViewController.swift */,
+				5C7F70DD26656ABE005AC733 /* Controllers */,
+				5C7F70DF26656B4C005AC733 /* Extensions&Functions */,
 				5C7F70D1266257F6005AC733 /* LocationCell.swift */,
-				5C7F70D52663F8B5005AC733 /* UIImage+Resize.swift */,
 				5C7F70C72660FB43005AC733 /* HudView.swift */,
-				5C7F70C926611D8E005AC733 /* Functions.swift */,
 				5CA79FD8265E43BB00D109FD /* Main.storyboard */,
 				5CA79FDE265E43BE00D109FD /* Assets.xcassets */,
 				5CA79FE0265E43BE00D109FD /* LaunchScreen.storyboard */,
@@ -98,6 +145,14 @@
 				5CA79FDB265E43BB00D109FD /* MyLocations.xcdatamodeld */,
 			);
 			path = MyLocations;
+			sourceTree = "<group>";
+		};
+		5CE06754266CE07900B913B9 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				5CE06759266D0C9600B913B9 /* Sound.caf */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA79FE2265E43BE00D109FD /* LaunchScreen.storyboard in Resources */,
+				5C7F70E82668CEEF005AC733 /* Rubik-Regular.ttf in Resources */,
+				5CE0675A266D0C9600B913B9 /* Sound.caf in Resources */,
 				5CA79FDF265E43BE00D109FD /* Assets.xcassets in Resources */,
+				5C7F70E62668CEDF005AC733 /* Rubik-SemiBold.ttf in Resources */,
 				5CA79FDA265E43BB00D109FD /* Main.storyboard in Resources */,
+				5C7F70E42668CECC005AC733 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +241,7 @@
 				5CA79FDD265E43BB00D109FD /* MyLocations.xcdatamodeld in Sources */,
 				5CA79FD5265E43BB00D109FD /* SceneDelegate.swift in Sources */,
 				5C7F70CD26613AFA005AC733 /* Location+CoreDataClass.swift in Sources */,
+				5C7F70D82664EB52005AC733 /* String+AddText.swift in Sources */,
 				5C7F70C82660FB43005AC733 /* HudView.swift in Sources */,
 				5CA79FEA265FDC9000D109FD /* LocationDetailsViewController.swift in Sources */,
 			);
@@ -341,7 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manusafarov.MyLocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -361,7 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manusafarov.MyLocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

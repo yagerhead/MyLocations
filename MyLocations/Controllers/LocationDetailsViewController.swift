@@ -60,6 +60,14 @@ class LocationDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "light&Dark")
+        
+        //Customize back button navigation VC
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    
         if let location = locationToEdit {
             title = "Edit Location"
             if location.hasPhoto {
@@ -87,6 +95,11 @@ class LocationDetailsViewController: UITableViewController {
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
         listenForBackgroundNotification()
+    }
+    
+    deinit {
+      print("*** deinit \(self)")
+      NotificationCenter.default.removeObserver(observer!)
     }
     
     //MARK: - Naviagtion
@@ -159,27 +172,14 @@ class LocationDetailsViewController: UITableViewController {
     
     //MARK: - Helper Methods
     func string(from placemark: CLPlacemark) -> String {
-        var text = ""
-        
-        if let tmp = placemark.subThoroughfare {
-            text += tmp + " "
-        }
-        if let tmp = placemark.thoroughfare {
-            text += tmp + ", "
-        }
-        if let tmp = placemark.locality {
-            text += tmp + ", "
-        }
-        if let tmp = placemark.administrativeArea {
-            text += tmp + " "
-        }
-        if let tmp = placemark.postalCode {
-            text += tmp + ", "
-        }
-        if let tmp = placemark.country {
-            text += tmp
-        }
-        return text
+        var line = ""
+        line.add(text: placemark.subThoroughfare)
+        line.add(text: placemark.thoroughfare, separatedBy: " ")
+        line.add(text: placemark.locality, separatedBy: ", ")
+        line.add(text: placemark.administrativeArea, separatedBy: ", ")
+        line.add(text: placemark.postalCode, separatedBy: " ")
+        line.add(text: placemark.country, separatedBy: ", ")
+        return line
     }
     
     func format(date: Date) -> String {
@@ -226,12 +226,19 @@ class LocationDetailsViewController: UITableViewController {
             pickPhoto()
         }
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Rubik-Medium", size: 14)
+        header.textLabel?.textColor = .lightGray
+    }
 }
 
 extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: - Image Helper Methods
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
+        imagePicker.view.tintColor = view.tintColor
         imagePicker.sourceType = .camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -240,6 +247,7 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
     
     func choosePhotoFromLibrary() {
         let imagePicker = UIImagePickerController()
+        imagePicker.view.tintColor = view.tintColor
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = true

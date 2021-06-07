@@ -51,6 +51,9 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         updateLocations()
         if !locations.isEmpty {
             showLocations()
@@ -149,7 +152,7 @@ extension MapViewController: MKMapViewDelegate {
             pinView.isEnabled = true
             pinView.canShowCallout = true
             pinView.animatesDrop = false
-            pinView.pinTintColor = UIColor(red: 0.32, green: 0.82, blue: 0.4, alpha: 1)
+            pinView.pinTintColor = UIColor(named: "secondColor")
             
             let rightButton = UIButton(type: .detailDisclosure)
             rightButton.addTarget(self, action: #selector(showLocationDetails(_:)), for: .touchUpInside)
