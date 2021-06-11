@@ -113,8 +113,6 @@
 		5CA79FC6265E43BB00D109FD = {
 			isa = PBXGroup;
 			children = (
-				5CE06754266CE07900B913B9 /* Sound */,
-				5C7F70E02668CDD9005AC733 /* Fonts */,
 				5C7F70DE26656AEE005AC733 /* CoreData */,
 				5CA79FD1265E43BB00D109FD /* MyLocations */,
 				5CA79FD0265E43BB00D109FD /* Products */,
@@ -143,6 +141,8 @@
 				5CA79FE0265E43BE00D109FD /* LaunchScreen.storyboard */,
 				5CA79FE3265E43BE00D109FD /* Info.plist */,
 				5CA79FDB265E43BB00D109FD /* MyLocations.xcdatamodeld */,
+				5CE06754266CE07900B913B9 /* Sound */,
+				5C7F70E02668CDD9005AC733 /* Fonts */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";

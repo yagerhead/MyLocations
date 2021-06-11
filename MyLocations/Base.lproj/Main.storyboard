@@ -561,14 +561,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="RfZ-n0-bg9">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="locationNavIcon" id="XwZ-ev-YBg">
-                            <inset key="imageInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" name="textTint"/>
                             <connections>
                                 <action selector="showLocations" destination="kIE-Jw-OxA" id="c1i-cs-OSD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="userNavIcon" id="hXz-mw-TSS">
-                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                             <color key="tintColor" name="textTint"/>
                             <connections>
                                 <action selector="showUser" destination="kIE-Jw-OxA" id="cym-Il-Oec"/>
