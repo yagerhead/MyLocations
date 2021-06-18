@@ -10,7 +10,7 @@
 the location on the map. This app detects the user's location using the Core Location framework. Saved user locations are displayed on the map, using the Map Kit. 
 Users can also attach photos to their saved locations using an iPhone camera or a photo library, all saved user data is stored using Core Data.
 
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8a8d49121422047.60c5ca5f3bf86.png" alt="MyLocation App Preview">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/04bfc2121814531.60cd0f9e025e0.png" alt="MyLocation App Preview">
 
 ## Things I learned:
 
